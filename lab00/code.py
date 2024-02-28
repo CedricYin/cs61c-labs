@@ -11,7 +11,9 @@ def fizzbuzz(num):
   #   print(f"{num}: fizz")
   # elif str(num) in ["5", "10", "15"]:
   #   print(f"{num}: buzz")
-  if num % 3 == 0:
+  if num % 15 == 0:
+    print("num: fizzbuzz")
+  elif num % 3 == 0:  
     print("num: fizz")
   elif num % 5 == 0:
     print("num: buzz")
