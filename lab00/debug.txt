@@ -1,0 +1,11 @@
+OSTYPE='linux-gnu'
+SH_VERSION='sh: 0: Illegal option --'
+GIT_VERSION='git version 2.34.1'
+PYTHON_VERSION='Python 3.10.12'
+GCC_VERSION='gcc (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0
+Copyright (C) 2021 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.'
+JAVA_VERSION='java version "21.0.1" 2023-10-17 LTS
+Java(TM) SE Runtime Environment (build 21.0.1+12-LTS-29)
+Java HotSpot(TM) 64-Bit Server VM (build 21.0.1+12-LTS-29, mixed mode, sharing)'
