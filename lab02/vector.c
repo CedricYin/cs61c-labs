@@ -106,7 +106,7 @@ int vector_get(vector_t *v, size_t loc) {
    Remember, you need to free up ALL the memory that was allocated. */
 void vector_delete(vector_t *v) {
     free(v->data);
-    v->data = NULL;
+    // v->data = NULL;  /* useless because of free(v)*/
     free(v);
 }
 
