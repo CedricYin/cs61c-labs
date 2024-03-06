@@ -1,6 +1,6 @@
-1.
-2.
-3.
-4.
-5.
-6.
+1. 进入f函数之前没有保存caller-saved寄存器（这里是t0~t3）
+2. la->lw
+3. 取node中arr的地址时，要用lw，不能用add，add只是得到指向node的指针，并不是指向arr的指针
+4. 传递函数指针时，不是“lw a1, 0(s1)”，而是“mv a1, s1”
+5. 忘记ret
+6. 地址offset的单位是4byte，因为int为32-bit

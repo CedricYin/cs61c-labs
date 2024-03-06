@@ -73,7 +73,7 @@ Epiloguethree:
 accumulatorfour:
 	lw t1 0(a0)
 	beq t1 x0 Endfour
-	add t2 t2 t1
+	add t2 t2 t1  # t2 unset
 	addi a0 a0 4
 	j accumulatorfour
 Endfour:

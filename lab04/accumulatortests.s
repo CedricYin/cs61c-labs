@@ -2,6 +2,7 @@
 
 .data
 inputarray: .word 1,2,3,4,5,6,7,0
+inputarray2: .word 0,4
 
 TestPassed: .asciiz "Test Passed!"
 TestFailed: .asciiz "Test Failed!"
@@ -16,9 +17,38 @@ TestFailed: .asciiz "Test Failed!"
 #Modify the test so that you can catch the bugs in four of the five solutions!
 main:
     la a0 inputarray
+
+    li t2, 10
+    li s0, 10
+    mv s1, s0
+    lw s2, 4(sp)
+
+    addi sp, sp, -4
+    sw t2, 0(sp)
     jal accumulatorone
+    lw t2, 0(sp)
+    addi sp, sp, 4
+
     li t0 28
-    beq a0 t0 Pass
+    li t1, 0
+    bne a0, t0, Neq1
+    addi t1, t1, 1
+Neq1:
+    bne s1, s0, Neq2
+    addi t1, t1, 1
+Neq2:
+    lw s3, 4(sp)
+    bne s2, s3, Neq3
+    addi t1, t1, 1
+Neq3:
+    la a0, inputarray2
+    jal accumulatorone
+    li t0, 0
+    bne a0, x0, Neq4
+    addi t1, t1, 1
+Neq4:
+    li t0, 4
+    beq t1 t0 Pass
 Fail:
     la a0 TestFailed
     jal print_string
