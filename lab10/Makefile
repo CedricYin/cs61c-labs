@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS= -std=gnu99 -c -fopenmp
+CFLAGS= -std=gnu99 -c -fopenmp -g
 LDFLAGS=-fopenmp
 OBJECTS=$(SOURCES:.c=.o)
 EXECUTABLES=hello v_add dotp
